@@ -1,0 +1,27 @@
+INFO - <ipython-input-27-fea14b691037> - 2022-06-27 23:27:49,857 - Using device: cuda
+INFO - <ipython-input-27-fea14b691037> - 2022-06-27 23:27:49,862 - Run name: 0
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:52,070 - step: 0; loss: 1072.975; bits_per_dim: 8.062, acc: 0.004, grad norm pre: 78.396, post: 78.396
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:52,074 - Sampling from model: 0
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:53,016 - step: 10; loss: 1072.973; bits_per_dim: 8.062, acc: 0.005, grad norm pre: 88.140, post: 88.140
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:53,514 - step: 20; loss: 1070.911; bits_per_dim: 8.047, acc: 0.005, grad norm pre: 101.781, post: 101.781
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:54,041 - step: 30; loss: 1071.739; bits_per_dim: 8.053, acc: 0.004, grad norm pre: 81.722, post: 81.722
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:54,535 - step: 40; loss: 1065.663; bits_per_dim: 8.007, acc: 0.005, grad norm pre: 95.686, post: 95.686
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:55,002 - step: 50; loss: 1066.820; bits_per_dim: 8.016, acc: 0.007, grad norm pre: 82.695, post: 82.695
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:55,484 - step: 60; loss: 1062.832; bits_per_dim: 7.986, acc: 0.008, grad norm pre: 82.214, post: 82.214
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:56,005 - step: 70; loss: 1063.036; bits_per_dim: 7.988, acc: 0.005, grad norm pre: 89.857, post: 89.857
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:56,475 - step: 80; loss: 1061.375; bits_per_dim: 7.975, acc: 0.007, grad norm pre: 88.501, post: 88.501
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:56,958 - step: 90; loss: 1065.999; bits_per_dim: 8.010, acc: 0.008, grad norm pre: 75.169, post: 75.169
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:57,440 - step: 100; loss: 1054.234; bits_per_dim: 7.922, acc: 0.010, grad norm pre: 75.796, post: 75.796
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:57,927 - step: 110; loss: 1048.411; bits_per_dim: 7.878, acc: 0.012, grad norm pre: 74.757, post: 74.757
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:58,449 - step: 120; loss: 1055.817; bits_per_dim: 7.933, acc: 0.007, grad norm pre: 75.410, post: 75.410
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:58,933 - step: 130; loss: 1045.901; bits_per_dim: 7.859, acc: 0.010, grad norm pre: 75.633, post: 75.633
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:59,409 - step: 140; loss: 1064.614; bits_per_dim: 8.000, acc: 0.006, grad norm pre: 63.868, post: 63.868
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:27:59,974 - step: 150; loss: 1048.485; bits_per_dim: 7.878, acc: 0.003, grad norm pre: 78.702, post: 78.702
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:00,472 - step: 160; loss: 1062.052; bits_per_dim: 7.980, acc: 0.004, grad norm pre: 57.790, post: 57.790
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:00,991 - step: 170; loss: 1053.605; bits_per_dim: 7.917, acc: 0.010, grad norm pre: 58.409, post: 58.409
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:01,496 - step: 180; loss: 1044.386; bits_per_dim: 7.848, acc: 0.008, grad norm pre: 54.373, post: 54.373
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:02,036 - step: 190; loss: 1037.146; bits_per_dim: 7.793, acc: 0.007, grad norm pre: 68.543, post: 68.543
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:02,600 - step: 200; loss: 1047.508; bits_per_dim: 7.871, acc: 0.005, grad norm pre: 54.809, post: 54.809
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:03,155 - step: 210; loss: 1029.365; bits_per_dim: 7.735, acc: 0.007, grad norm pre: 78.954, post: 78.954
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:03,719 - step: 220; loss: 1051.621; bits_per_dim: 7.902, acc: 0.003, grad norm pre: 72.117, post: 72.117
+INFO - <ipython-input-29-44ee206a9f55> - 2022-06-27 23:28:04,209 - step: 230; loss: 1024.005; bits_per_dim: 7.694, acc: 0.010, grad norm pre: 62.929, post: 62.929
