@@ -1,0 +1,30 @@
+!!python/object:argparse.Namespace
+config: transformer_tiny.yml
+doc: '0'
+log: transformer_logs/0
+model: !!python/object:argparse.Namespace
+  attn_type: global
+  channels: 3
+  distr: cat
+  dropout: 0.1
+  filter_size: 128
+  hidden_size: 64
+  image_size: 8
+  initializer_gain: 0.2
+  nlayers: 6
+  num_heads: 4
+  total_key_depth: 0
+  total_value_depth: 0
+optim: !!python/object:argparse.Namespace
+  lr: 0.1
+  warmup: 4000
+sample: false
+seed: 1234
+train: !!python/object:argparse.Namespace
+  batch_size: 8
+  clip_grad_norm: 0.0
+  epochs: 100
+  log_iter: 10
+  sample_iter: 1000
+  sample_size: 8
+verbose: info
