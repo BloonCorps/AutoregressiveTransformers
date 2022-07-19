@@ -1,2 +1,2 @@
-INFO - <ipython-input-17-fea14b691037> - 2022-07-11 15:37:26,139 - Using device: cuda
-INFO - <ipython-input-17-fea14b691037> - 2022-07-11 15:37:26,140 - Run name: 0
+INFO - <ipython-input-14-fea14b691037> - 2022-07-17 14:59:30,431 - Using device: cpu
+INFO - <ipython-input-14-fea14b691037> - 2022-07-17 14:59:30,433 - Run name: 0

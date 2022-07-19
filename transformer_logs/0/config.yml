@@ -8,7 +8,7 @@ model: !!python/object:argparse.Namespace
   distr: cat
   dropout: 0.1
   filter_size: 128
-  hidden_size: 64
+  hidden_size: 8
   image_size: 8
   initializer_gain: 0.2
   nlayers: 6
