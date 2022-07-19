@@ -197,7 +197,7 @@ class MMCDataset(Dataset):
                     f"coordinate_type has to be either 'xyz' or 'internal'."
                 )
         
-    def compute_potential_energy_for_ic(self, ic):
+    def compute_potential_energy_for_ic(self, ic, unitless=False):
         if "reference_particle_1_xyz" not in ic.keys():
             ic["reference_particle_1_xyz"] = ic['bond'].new_zeros((ic['bond'].shape[0], 3))
         
@@ -216,8 +216,10 @@ class MMCDataset(Dataset):
             state = self._context.setPositions(xyz[i].numpy())
             state = self._context.getState(getEnergy = True)
             potential_energy = state.getPotentialEnergy()
-            potential_energy_list.append(potential_energy.value_in_unit(unit.kilojoule_per_mole))
-            
+            if unitless==False:
+                potential_energy_list.append(potential_energy.value_in_unit(unit.kilojoule_per_mole))
+            else:
+                potential_energy_list.append(potential_energy)
         return np.array(potential_energy_list)
 
     def save_ic_to_dcd(self, ic, file_name):

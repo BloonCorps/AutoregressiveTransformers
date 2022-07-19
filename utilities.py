@@ -100,8 +100,12 @@ def vec_to_number(one_hots, num_decimals = 2):
 Bond Angle Distribution Calculations
 """
 
-def return_ba_mean_covar(data):
-    bonds_angles = data[:, :-19] 
+def return_ba_mean_covar(data, dec=False):
+    if dec==False:
+        bonds_angles = data[:, :-19] 
+    else:
+        bonds_angles = data[:, :-99] #deccalanine has 99 dihedrals
+        
     bonds_angles = bonds_angles.permute(1, 0)
     npba = np.array(bonds_angles)
     covmat = np.cov(npba)
