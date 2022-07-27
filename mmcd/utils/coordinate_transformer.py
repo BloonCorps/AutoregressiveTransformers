@@ -4,8 +4,8 @@ import numpy as np
 import mdtraj
 import simtk.openmm as omm
 import simtk.unit as unit
-import simtk.openmm.app.topology as topology
-import simtk.openmm.app.element as element
+import openmm.app.topology as topology
+import openmm.app.element as element
 import math
 from collections import deque, OrderedDict, defaultdict, namedtuple
 import mmcd.utils.functional as functional

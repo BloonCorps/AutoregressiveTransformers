@@ -38,10 +38,10 @@ def extract_ramachandran(data):
 
     return result[:, [43,45]]
 
-def rebuild(flat, data_length = 19):
-    data_length = 19 #this is particular to dialene
+def rebuild(flat, data_length = 99):
+    #data_length = 19 #this is particular to dialene
     result = {}
-
+    #raise NotImplementedError
     result['reference_particle_1_xyz'] = torch.zeros((flat.shape[0], 3))
     result['reference_particle_2_bond'] = flat[:, 0]
     result['reference_particle_3_bond'] = flat[:, 1]
