@@ -9,6 +9,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
 import mdtraj
 import mmcd
+import mmcd.utils
 
 ## see https://github.com/pytorch/vision/blob/master/torchvision/datasets/cifar.py
 ## and https://github.com/pytorch/vision/blob/master/torchvision/datasets/vision.py
