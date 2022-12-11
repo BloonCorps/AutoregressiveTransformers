@@ -112,7 +112,7 @@ class Attn(nn.Module):
 ##########################
 
 class UnconditionalTransformer(nn.Module):
-    def __init__(self, seq_len=300, hidden_size=512, num_bins=600, dropout=0.00, dnlayers=6, batch_size=512, ffn_hidden_size=2048, 
+    def __init__(self, seq_len=300, hidden_size=512, num_bins=800, dropout=0.00, dnlayers=6, batch_size=512, ffn_hidden_size=2048, 
                  num_heads=4, qk_depth=128, v_depth=128, pseudolikelihood=False, device=torch.device("cuda")):
         super(UnconditionalTransformer, self).__init__()
         #model specific params
@@ -130,7 +130,12 @@ class UnconditionalTransformer(nn.Module):
         self.loss_function = nn.CrossEntropyLoss()
         self.loss_function_no_sum = nn.CrossEntropyLoss(reduction="none")
         #model components
-        self.embeds = nn.Embedding(1, self.hidden_size)
+        self.embeds = nn.Sequential(nn.Linear(1, self.hidden_size, bias=True),
+                                 nn.GELU(),
+                                 nn.Linear(self.hidden_size, self.hidden_size, bias=True),
+                                 nn.GELU(),
+                                 nn.Linear(self.hidden_size, self.hidden_size, bias=True))
+        
         self.input_dropout = nn.Dropout(self.dropout)
         self.output_dense = nn.Linear(self.hidden_size, self.num_bins, bias=True)
         
@@ -156,13 +161,13 @@ class UnconditionalTransformer(nn.Module):
         if sampling: #sampling the 30 multimodal distributions
             curr_infer_length = decoder_input.shape[1]
             decoder_input = F.pad(decoder_input, (0, self.num_decoder_dim - curr_infer_length))  
-            
+                    
         #apply embedding and shift and pad, only autoregressive needs shifting
         if self.pseudolikelihood == False:
-            decoder_input = self.shift_and_pad_(self.embeds(decoder_input) * (self.hidden_size ** 0.5))
+            decoder_input = self.shift_and_pad_(decoder_input.unsqueeze(-1)) * (self.hidden_size ** 0.5)
         #if psuedolikelihood, then no shifting needed 
         elif self.pseudolikelihood == True:
-            decoder_input = self.embeds(decoder_input) * (self.hidden_size ** 0.5) 
+            decoder_input = self.embeds(decoder_input.unsqueeze(-1)) * (self.hidden_size ** 0.5) 
         else:
             raise NotImplementedError #can only be autoregressive or pseudolikelihood
         
